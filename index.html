@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Live Indian IPO GMP &amp; Expected Return</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#1a1d21;--muted:#667085;--line:#e4e7ec;--accent:#1d6fe8;--good:#0f9d58;--ok:#b7791f;--bad:#d93025;--warn:#fff4d6;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--card:#1b1f25;--text:#eef0f3;--muted:#98a2b3;--line:#2d333b;--accent:#5b9dff;--good:#3ddc84;--ok:#f0b84a;--bad:#ff6b60;--warn:#3a3118;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111418;--card:#1b1f25;--text:#eef0f3;--muted:#98a2b3;--line:#2d333b;--accent:#5b9dff;--good:#3ddc84;--ok:#f0b84a;--bad:#ff6b60;--warn:#3a3118;color-scheme:dark}
+html{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+.wrap{max-width:1000px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.5rem;margin:0 0 4px}
+h2{font-size:1.05rem;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 14px;font-size:.92rem}
+.top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--text);padding:6px 14px;border-radius:99px;cursor:pointer;font-size:.9rem;margin-right:6px}
+.tabs button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.live{font-size:.82rem;color:var(--muted)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--good);margin-right:6px}
+.stale{background:var(--warn);border:1px solid var(--ok);padding:8px 12px;border-radius:8px;font-size:.88rem;margin-bottom:14px;display:none}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:16px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{text-align:right;padding:10px 8px;border-bottom:1px solid var(--line);font-size:.92rem;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:600;font-size:.76rem;text-transform:uppercase}
+.pill{padding:2px 9px;border-radius:99px;font-size:.76rem;font-weight:600;border:1px solid currentColor}
+.Strong{color:var(--good)}.Moderate{color:var(--ok)}.Flat{color:var(--muted)}.Negative{color:var(--bad)}
+.bar{height:6px;border-radius:3px;background:var(--line);margin-top:4px;position:relative;overflow:hidden;min-width:80px}
+.bar i{position:absolute;top:0;bottom:0;left:0}
+.dates,.range{color:var(--muted);font-size:.78rem}
+.tag{font-size:.7rem;border:1px solid var(--line);border-radius:4px;padding:0 5px;margin-left:6px;color:var(--muted)}
+.empty{color:var(--muted);padding:6px 0}
+.note{font-size:.82rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Live Indian IPO GMP &amp; Expected Return</h1>
+  <p class="sub">Updates automatically. Expected return = GMP ÷ issue price (upper band) × 100.</p>
+  <div class="top">
+    <div class="tabs" id="tabs">
+      <button data-t="All" class="on">All</button><button data-t="Mainboard">Mainboard</button><button data-t="SME">SME</button>
+    </div>
+    <div class="live"><span class="dot"></span><span id="stamp">Loading…</span></div>
+  </div>
+  <div class="stale" id="stale"></div>
+  <div class="card"><h2>Open for subscription</h2><div id="open" class="scroll"></div></div>
+  <div class="card"><h2>Closed, awaiting listing</h2><div id="closed" class="scroll"></div></div>
+  <div class="card"><h2>Upcoming</h2><div id="upcoming" class="scroll"></div></div>
+  <p class="note">Source: InvestorGain.com. GMP is an unofficial, unregulated indicator that changes through the day and can be wrong; listing prices often differ from the GMP-implied price. “Range” is the lowest and highest GMP recorded for that IPO. Informational only, not investment advice.</p>
+</div>
+<script>
+var DATA=null, TYPE="All";
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function inr(n){return "₹"+n.toLocaleString("en-IN",{maximumFractionDigits:2});}
+function todayIST(){return new Date().toLocaleDateString("en-CA",{timeZone:"Asia/Kolkata"});}
+function sig(p){return p>=20?"Strong":p>=5?"Moderate":p>=0?"Flat":"Negative";}
+function fmtD(iso){if(!iso)return "–";var d=new Date(iso+"T00:00:00");return d.toLocaleDateString("en-IN",{day:"numeric",month:"short"});}
+function group(x,t){
+  if(x.listing&&t>x.listing)return null;
+  if(x.open&&t<x.open)return "upcoming";
+  if(x.close&&t<=x.close)return "open";
+  return "closed";
+}
+function table(rows){
+  if(!rows.length)return "<div class='empty'>None right now.</div>";
+  rows=rows.map(function(x){return {x:x,p:(x.gmp==null?null:x.gmp/x.price*100)};})
+   .sort(function(a,b){return (b.p==null?-1e9:b.p)-(a.p==null?-1e9:a.p);});
+  return "<table><thead><tr><th>IPO</th><th>Issue ₹</th><th>GMP ₹</th><th>Expected listing ₹</th><th>Expected return</th><th>Profit / lot</th><th>Signal</th></tr></thead><tbody>"+
+  rows.map(function(r){
+    var x=r.x,dt="<div class='dates'>"+fmtD(x.open)+" – "+fmtD(x.close)+" · lists "+fmtD(x.listing)+"</div>";
+    var head="<td><b>"+esc(x.name)+"</b>"+(x.type==="SME"?"<span class='tag'>SME</span>":"")+dt+"</td><td>"+inr(x.price)+"</td>";
+    if(r.p==null)return "<tr>"+head+"<td colspan='5' style='text-align:right;color:var(--muted)'>No GMP quoted yet</td></tr>";
+    var col=r.p>=0?"var(--good)":"var(--bad)",w=Math.min(Math.abs(r.p),40)/40*100,s=sig(r.p);
+    var rng=(x.gmp_low!=null&&x.gmp_high!=null)?"<div class='range'>Range ₹"+x.gmp_low+" – ₹"+x.gmp_high+"</div>":"";
+    return "<tr>"+head+"<td>"+inr(x.gmp)+rng+"</td><td>"+inr(x.price+x.gmp)+"</td>"+
+     "<td><b style='color:"+col+"'>"+r.p.toFixed(2)+"%</b><div class='bar'><i style='width:"+w+"%;background:"+col+"'></i></div></td>"+
+     "<td>"+inr(x.gmp*x.lot)+"</td><td><span class='pill "+s+"'>"+(s==="Flat"?"Flat/Weak":s)+"</span></td></tr>";
+  }).join("")+"</tbody></table>";
+}
+function render(){
+  if(!DATA)return;
+  var t=todayIST(),g={open:[],closed:[],upcoming:[]};
+  DATA.ipos.forEach(function(x){
+    if(TYPE!=="All"&&x.type!==TYPE)return;
+    var k=group(x,t); if(k)g[k].push(x);
+  });
+  ["open","closed","upcoming"].forEach(function(k){document.getElementById(k).innerHTML=table(g[k]);});
+  var ts=new Date(DATA.generated_at);
+  document.getElementById("stamp").textContent="Data updated "+ts.toLocaleString("en-IN",{timeZone:"Asia/Kolkata",day:"numeric",month:"short",hour:"numeric",minute:"2-digit"})+" IST · checks for new data every 5 min";
+  var st=document.getElementById("stale"),age=(Date.now()-ts.getTime())/36e5;
+  if(age>3){st.style.display="block";st.textContent="This data is "+Math.floor(age)+" hours old. The automatic update may have stopped, so check the source site before relying on it.";}else{st.style.display="none";}
+}
+function load(){
+  fetch("data.json?t="+Date.now()).then(function(r){return r.json();}).then(function(d){DATA=d;render();})
+   .catch(function(){document.getElementById("stamp").textContent="Could not load data";});
+}
+document.getElementById("tabs").addEventListener("click",function(e){
+  var t=e.target.getAttribute("data-t"); if(!t)return; TYPE=t;
+  Array.prototype.forEach.call(this.children,function(b){b.classList.toggle("on",b.getAttribute("data-t")===t);}); render();
+});
+load(); setInterval(load,300000);
+</script>
+</body>
+</html>
