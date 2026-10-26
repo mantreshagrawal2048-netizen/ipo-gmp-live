@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T05:40:28.407673+05:30",
+ "generated_at": "2026-10-26T06:49:22.811367+05:30",
  "source": "InvestorGain.com + IPOGyani.com + IPOWatch.in",
  "ipos": [
   {
@@ -122,7 +122,7 @@
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 33.0,
+   "gmp": 34.5,
    "gmp_low": 33.0,
    "gmp_high": 121.0,
    "lot": 9,
@@ -130,7 +130,7 @@
    "close": "2026-10-28",
    "listing": "2026-11-02",
    "gmp_sources": {
-    "InvestorGain": 33.0,
+    "InvestorGain": 36.0,
     "IPOGyani": 33.0
    }
   },
