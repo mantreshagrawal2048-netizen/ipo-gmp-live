@@ -1,0 +1,278 @@
+{
+ "generated_at": "2026-10-25T11:00:00+05:30",
+ "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru (starter snapshot - replaced automatically once the workflow runs)",
+ "ipos": [
+  {
+   "name": "Jio Platforms",
+   "type": "Mainboard",
+   "price": 1119,
+   "gmp": 247.2,
+   "gmp_sources": {
+    "InvestorGain": 247,
+    "IPOGyani": 247,
+    "IPOWatch": 250,
+    "IPOJi": 245,
+    "IPOGuru": 247
+   },
+   "gmp_low": 148,
+   "gmp_high": 273,
+   "lot": 12,
+   "open": "2026-10-21",
+   "close": "2026-10-23",
+   "listing": "2026-10-28"
+  },
+  {
+   "name": "Paras Healthcare",
+   "type": "Mainboard",
+   "price": 693,
+   "gmp": 11.2,
+   "gmp_sources": {
+    "InvestorGain": 12,
+    "IPOGyani": 12,
+    "IPOWatch": 10,
+    "IPOJi": 10,
+    "IPOGuru": 12
+   },
+   "gmp_low": 11,
+   "gmp_high": 96,
+   "lot": 21,
+   "open": "2026-10-21",
+   "close": "2026-10-23",
+   "listing": "2026-10-28"
+  },
+  {
+   "name": "EAAA India Alternatives",
+   "type": "Mainboard",
+   "price": 1665,
+   "gmp": 52.0,
+   "gmp_sources": {
+    "InvestorGain": 45,
+    "IPOGyani": 45,
+    "IPOWatch": 80,
+    "IPOJi": 45,
+    "IPOGuru": 45
+   },
+   "gmp_low": 45,
+   "gmp_high": 121,
+   "lot": 9,
+   "open": "2026-10-26",
+   "close": "2026-10-28",
+   "listing": "2026-11-02"
+  },
+  {
+   "name": "BLS Polymers",
+   "type": "Mainboard",
+   "price": 150,
+   "gmp": 34.53,
+   "gmp_sources": {
+    "InvestorGain": 38,
+    "IPOGyani": 33.67,
+    "IPOWatch": 35,
+    "IPOJi": 28,
+    "IPOGuru": 38
+   },
+   "gmp_low": 18,
+   "gmp_high": 38,
+   "lot": 100,
+   "open": "2026-10-27",
+   "close": "2026-10-29",
+   "listing": "2026-11-03"
+  },
+  {
+   "name": "SFC Environmental Technologies",
+   "type": "Mainboard",
+   "price": 330,
+   "gmp": 31.2,
+   "gmp_sources": {
+    "InvestorGain": 32,
+    "IPOGyani": 32,
+    "IPOWatch": 30,
+    "IPOJi": 30,
+    "IPOGuru": 32
+   },
+   "gmp_low": 21,
+   "gmp_high": 32,
+   "lot": 45,
+   "open": "2026-10-27",
+   "close": "2026-10-29",
+   "listing": "2026-11-03"
+  },
+  {
+   "name": "M.K.Sons Fine Jewels",
+   "type": "Mainboard",
+   "price": 162,
+   "gmp": 7.2,
+   "gmp_sources": {
+    "InvestorGain": 7,
+    "IPOGyani": 7,
+    "IPOWatch": 8,
+    "IPOJi": 7,
+    "IPOGuru": 7
+   },
+   "gmp_low": 7,
+   "gmp_high": 7,
+   "lot": 91,
+   "open": "2026-10-28",
+   "close": "2026-10-30",
+   "listing": "2026-11-04"
+  },
+  {
+   "name": "Bombay Coated and Special Steels",
+   "type": "Mainboard",
+   "price": 82,
+   "gmp": 8.0,
+   "gmp_sources": {
+    "InvestorGain": 8,
+    "IPOGyani": 8,
+    "IPOWatch": 8,
+    "IPOJi": 8,
+    "IPOGuru": 8
+   },
+   "gmp_low": 8,
+   "gmp_high": 8,
+   "lot": 182,
+   "open": "2026-10-29",
+   "close": "2026-11-02",
+   "listing": "2026-11-05"
+  },
+  {
+   "name": "Core4 Engineers",
+   "type": "SME",
+   "price": 93,
+   "gmp": null,
+   "gmp_sources": {},
+   "gmp_low": null,
+   "gmp_high": null,
+   "lot": 1200,
+   "open": "2026-10-23",
+   "close": "2026-10-27",
+   "listing": "2026-10-30"
+  },
+  {
+   "name": "Wiscon Industries",
+   "type": "SME",
+   "price": 204,
+   "gmp": null,
+   "gmp_sources": {},
+   "gmp_low": null,
+   "gmp_high": null,
+   "lot": 600,
+   "open": "2026-10-27",
+   "close": "2026-10-29",
+   "listing": "2026-11-03"
+  },
+  {
+   "name": "Carver Roboweld",
+   "type": "SME",
+   "price": 80,
+   "gmp": null,
+   "gmp_sources": {},
+   "gmp_low": null,
+   "gmp_high": null,
+   "lot": 1600,
+   "open": "2026-10-28",
+   "close": "2026-10-30",
+   "listing": "2026-11-04"
+  },
+  {
+   "name": "Ajwa Projects",
+   "type": "SME",
+   "price": 203,
+   "gmp": null,
+   "gmp_sources": {},
+   "gmp_low": null,
+   "gmp_high": null,
+   "lot": 600,
+   "open": "2026-10-28",
+   "close": "2026-10-30",
+   "listing": "2026-11-04"
+  },
+  {
+   "name": "Antala Industries",
+   "type": "SME",
+   "price": 67,
+   "gmp": null,
+   "gmp_sources": {},
+   "gmp_low": null,
+   "gmp_high": null,
+   "lot": 2000,
+   "open": "2026-10-29",
+   "close": "2026-11-02",
+   "listing": "2026-11-05"
+  }
+ ],
+ "listed": [
+  {
+   "name": "Tonbo Imaging India",
+   "type": "Mainboard",
+   "price": 700,
+   "gmp": 452,
+   "listing_gain_pct": 65.71,
+   "listing": "2026-10-23"
+  },
+  {
+   "name": "Sahajanand Medical Technologies",
+   "type": "Mainboard",
+   "price": 344,
+   "gmp": 17,
+   "listing_gain_pct": 7.89,
+   "listing": "2026-10-23"
+  },
+  {
+   "name": "Zetwerk",
+   "type": "Mainboard",
+   "price": 151,
+   "gmp": 1.2,
+   "listing_gain_pct": 5.46,
+   "listing": "2026-10-23"
+  },
+  {
+   "name": "Bonfiglioli Transmissions",
+   "type": "Mainboard",
+   "price": 586,
+   "gmp": 66,
+   "listing_gain_pct": 0,
+   "listing": "2026-10-23"
+  },
+  {
+   "name": "Fusion CX",
+   "type": "Mainboard",
+   "price": 289,
+   "gmp": 13.5,
+   "listing_gain_pct": 5.54,
+   "listing": "2026-10-22"
+  },
+  {
+   "name": "HD Fire Protect",
+   "type": "Mainboard",
+   "price": 271,
+   "gmp": 70,
+   "listing_gain_pct": 23.62,
+   "listing": "2026-10-21"
+  },
+  {
+   "name": "Vaibhav Vyapaar",
+   "type": "SME",
+   "price": 54,
+   "gmp": 3,
+   "listing_gain_pct": -2.04,
+   "listing": "2026-10-21"
+  },
+  {
+   "name": "R.K.Fashion Accessories",
+   "type": "SME",
+   "price": 82,
+   "gmp": 1.5,
+   "listing_gain_pct": -2.44,
+   "listing": "2026-10-12"
+  },
+  {
+   "name": "Acme India Industries",
+   "type": "SME",
+   "price": 196,
+   "gmp": 43,
+   "listing_gain_pct": 12.76,
+   "listing": "2026-10-09"
+  }
+ ]
+}
