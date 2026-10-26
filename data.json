@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T13:42:33.642154+05:30",
+ "generated_at": "2026-10-26T14:49:38.013843+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -19,18 +19,18 @@
    "name": "Bombay Coated and Special Steels",
    "type": "Mainboard",
    "price": 82.0,
-   "gmp": 8.0,
+   "gmp": 8.5,
    "gmp_low": 8.0,
-   "gmp_high": 8.0,
+   "gmp_high": 9.0,
    "lot": 182,
    "open": "2026-10-29",
    "close": "2026-11-02",
    "listing": "2026-11-05",
    "gmp_sources": {
-    "InvestorGain": 8.0,
+    "InvestorGain": 9.0,
     "IPOGyani": 8.0,
     "IPOJi": 8.0,
-    "IPOGuru": 8.0
+    "IPOGuru": 9.0
    }
   },
   {
@@ -99,7 +99,7 @@
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 34.25,
+   "gmp": 32.75,
    "gmp_low": 18.0,
    "gmp_high": 38.0,
    "lot": 100,
@@ -107,10 +107,10 @@
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 33.0,
-    "IPOGyani": 38.0,
+    "InvestorGain": 37.0,
+    "IPOGyani": 33.0,
     "IPOJi": 28.0,
-    "IPOGuru": 38.0
+    "IPOGuru": 33.0
    }
   },
   {
@@ -130,7 +130,7 @@
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 35.25,
+   "gmp": 36.75,
    "gmp_low": 33.0,
    "gmp_high": 121.0,
    "lot": 9,
@@ -138,10 +138,10 @@
    "close": "2026-10-28",
    "listing": "2026-11-02",
    "gmp_sources": {
-    "InvestorGain": 35.0,
-    "IPOGyani": 35.0,
+    "InvestorGain": 37.0,
+    "IPOGyani": 37.0,
     "IPOJi": 36.0,
-    "IPOGuru": 35.0
+    "IPOGuru": 37.0
    }
   },
   {
@@ -161,7 +161,7 @@
    "name": "Jio Platforms",
    "type": "Mainboard",
    "price": 1119.0,
-   "gmp": 247.0,
+   "gmp": 244.75,
    "gmp_low": 148.0,
    "gmp_high": 273.0,
    "lot": 12,
@@ -169,25 +169,25 @@
    "close": "2026-10-23",
    "listing": "2026-10-28",
    "gmp_sources": {
-    "InvestorGain": 247.0,
+    "InvestorGain": 244.0,
     "IPOGyani": 247.0,
-    "IPOJi": 247.0,
-    "IPOGuru": 247.0
+    "IPOJi": 244.0,
+    "IPOGuru": 244.0
    }
   },
   {
    "name": "Paras Healthcare",
    "type": "Mainboard",
    "price": 693.0,
-   "gmp": 9.0,
-   "gmp_low": 9.0,
+   "gmp": 8.0,
+   "gmp_low": 5.0,
    "gmp_high": 96.0,
    "lot": 21,
    "open": "2026-10-21",
    "close": "2026-10-23",
    "listing": "2026-10-28",
    "gmp_sources": {
-    "InvestorGain": 9.0,
+    "InvestorGain": 5.0,
     "IPOGyani": 9.0,
     "IPOJi": 9.0,
     "IPOGuru": 9.0
