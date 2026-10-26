@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T11:28:26.817165+05:30",
+ "generated_at": "2026-10-26T11:59:17.143115+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -81,7 +81,7 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 30.5,
+   "gmp": 29.0,
    "gmp_low": 21.0,
    "gmp_high": 32.0,
    "lot": 45,
@@ -89,10 +89,10 @@
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 30.0,
-    "IPOGyani": 32.0,
+    "InvestorGain": 28.0,
+    "IPOGyani": 30.0,
     "IPOJi": 30.0,
-    "IPOGuru": 30.0
+    "IPOGuru": 28.0
    }
   },
   {
@@ -130,7 +130,7 @@
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 35.5,
+   "gmp": 35.25,
    "gmp_low": 33.0,
    "gmp_high": 121.0,
    "lot": 9,
@@ -139,7 +139,7 @@
    "listing": "2026-11-02",
    "gmp_sources": {
     "InvestorGain": 35.0,
-    "IPOGyani": 36.0,
+    "IPOGyani": 35.0,
     "IPOJi": 36.0,
     "IPOGuru": 35.0
    }
