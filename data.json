@@ -1,20 +1,7 @@
 {
- "generated_at": "2026-10-27T09:57:03.375818+05:30",
+ "generated_at": "2026-10-27T10:29:42.303734+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
-  {
-   "name": "HGS (India)",
-   "type": "SME",
-   "price": 120.0,
-   "gmp": null,
-   "gmp_low": null,
-   "gmp_high": null,
-   "lot": 1200,
-   "open": "2026-10-30",
-   "close": "2026-11-03",
-   "listing": "2026-11-06",
-   "gmp_sources": {}
-  },
   {
    "name": "Johnsoncab Electricals",
    "type": "SME",
@@ -29,13 +16,13 @@
    "gmp_sources": {}
   },
   {
-   "name": "Maxwell Engineering Solutions",
+   "name": "HGS (India)",
    "type": "SME",
-   "price": 158.0,
+   "price": 120.0,
    "gmp": null,
    "gmp_low": null,
    "gmp_high": null,
-   "lot": 800,
+   "lot": 1200,
    "open": "2026-10-30",
    "close": "2026-11-03",
    "listing": "2026-11-06",
@@ -49,6 +36,19 @@
    "gmp_low": null,
    "gmp_high": null,
    "lot": 1200,
+   "open": "2026-10-30",
+   "close": "2026-11-03",
+   "listing": "2026-11-06",
+   "gmp_sources": {}
+  },
+  {
+   "name": "Maxwell Engineering Solutions",
+   "type": "SME",
+   "price": 158.0,
+   "gmp": null,
+   "gmp_low": null,
+   "gmp_high": null,
+   "lot": 800,
    "open": "2026-10-30",
    "close": "2026-11-03",
    "listing": "2026-11-06",
@@ -86,17 +86,22 @@
    }
   },
   {
-   "name": "Carver Roboweld",
-   "type": "SME",
-   "price": 80.0,
-   "gmp": null,
-   "gmp_low": 0.0,
-   "gmp_high": 0.0,
-   "lot": 1600,
+   "name": "M.K.Sons Fine Jewels",
+   "type": "Mainboard",
+   "price": 162.0,
+   "gmp": 8.0,
+   "gmp_low": 7.0,
+   "gmp_high": 8.0,
+   "lot": 91,
    "open": "2026-10-28",
    "close": "2026-10-30",
    "listing": "2026-11-04",
-   "gmp_sources": {}
+   "gmp_sources": {
+    "InvestorGain": 8.0,
+    "IPOGyani": 8.0,
+    "IPOJi": 8.0,
+    "IPOGuru": 8.0
+   }
   },
   {
    "name": "Ajwa Projects",
@@ -115,22 +120,30 @@
    }
   },
   {
-   "name": "M.K.Sons Fine Jewels",
-   "type": "Mainboard",
-   "price": 162.0,
-   "gmp": 8.0,
-   "gmp_low": 7.0,
-   "gmp_high": 8.0,
-   "lot": 91,
+   "name": "Carver Roboweld",
+   "type": "SME",
+   "price": 80.0,
+   "gmp": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
+   "lot": 1600,
    "open": "2026-10-28",
    "close": "2026-10-30",
    "listing": "2026-11-04",
-   "gmp_sources": {
-    "InvestorGain": 8.0,
-    "IPOGyani": 8.0,
-    "IPOJi": 8.0,
-    "IPOGuru": 8.0
-   }
+   "gmp_sources": {}
+  },
+  {
+   "name": "Wiscon Industries",
+   "type": "SME",
+   "price": 204.0,
+   "gmp": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
+   "lot": 600,
+   "open": "2026-10-27",
+   "close": "2026-10-29",
+   "listing": "2026-11-03",
+   "gmp_sources": {}
   },
   {
    "name": "BLS Polymers",
@@ -169,19 +182,6 @@
    }
   },
   {
-   "name": "Wiscon Industries",
-   "type": "SME",
-   "price": 204.0,
-   "gmp": null,
-   "gmp_low": 0.0,
-   "gmp_high": 0.0,
-   "lot": 600,
-   "open": "2026-10-27",
-   "close": "2026-10-29",
-   "listing": "2026-11-03",
-   "gmp_sources": {}
-  },
-  {
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
@@ -213,24 +213,6 @@
    "gmp_sources": {}
   },
   {
-   "name": "Jio Platforms",
-   "type": "Mainboard",
-   "price": 1119.0,
-   "gmp": 244.0,
-   "gmp_low": 148.0,
-   "gmp_high": 273.0,
-   "lot": 12,
-   "open": "2026-10-21",
-   "close": "2026-10-23",
-   "listing": "2026-10-28",
-   "gmp_sources": {
-    "InvestorGain": 243.0,
-    "IPOGyani": 244.0,
-    "IPOJi": 243.0,
-    "IPOGuru": 246.0
-   }
-  },
-  {
    "name": "Paras Healthcare",
    "type": "Mainboard",
    "price": 693.0,
@@ -246,6 +228,24 @@
     "IPOGyani": 11.0,
     "IPOJi": 10.0,
     "IPOGuru": 11.0
+   }
+  },
+  {
+   "name": "Jio Platforms",
+   "type": "Mainboard",
+   "price": 1119.0,
+   "gmp": 247.12,
+   "gmp_low": 148.0,
+   "gmp_high": 273.0,
+   "lot": 12,
+   "open": "2026-10-21",
+   "close": "2026-10-23",
+   "listing": "2026-10-28",
+   "gmp_sources": {
+    "InvestorGain": 248.5,
+    "IPOGyani": 246.0,
+    "IPOJi": 248.0,
+    "IPOGuru": 246.0
    }
   }
  ],
