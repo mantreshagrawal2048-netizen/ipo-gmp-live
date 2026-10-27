@@ -1,7 +1,20 @@
 {
- "generated_at": "2026-10-27T06:43:32.181362+05:30",
+ "generated_at": "2026-10-27T08:29:25.482868+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
+  {
+   "name": "Vectras Enprocon",
+   "type": "SME",
+   "price": 105.0,
+   "gmp": null,
+   "gmp_low": null,
+   "gmp_high": null,
+   "lot": 1200,
+   "open": "2026-10-30",
+   "close": "2026-11-03",
+   "listing": "2026-11-06",
+   "gmp_sources": {}
+  },
   {
    "name": "Antala Industries",
    "type": "SME",
@@ -84,7 +97,7 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 21.0,
+   "gmp": 20.25,
    "gmp_low": 20.0,
    "gmp_high": 32.0,
    "lot": 45,
@@ -94,7 +107,7 @@
    "gmp_sources": {
     "InvestorGain": 20.0,
     "IPOGyani": 20.0,
-    "IPOJi": 24.0,
+    "IPOJi": 21.0,
     "IPOGuru": 20.0
    }
   },
@@ -102,7 +115,7 @@
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 35.83,
+   "gmp": 37.17,
    "gmp_low": 18.0,
    "gmp_high": 40.0,
    "lot": 100,
@@ -111,8 +124,8 @@
    "listing": "2026-11-03",
    "gmp_sources": {
     "InvestorGain": 40.0,
-    "IPOGyani": 35.33,
-    "IPOJi": 28.0,
+    "IPOGyani": 36.67,
+    "IPOJi": 32.0,
     "IPOGuru": 40.0
    }
   },
@@ -133,7 +146,7 @@
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 18.0,
+   "gmp": 16.25,
    "gmp_low": 15.0,
    "gmp_high": 121.0,
    "lot": 9,
@@ -143,7 +156,7 @@
    "gmp_sources": {
     "InvestorGain": 15.0,
     "IPOGyani": 15.0,
-    "IPOJi": 27.0,
+    "IPOJi": 20.0,
     "IPOGuru": 15.0
    }
   },
@@ -164,7 +177,7 @@
    "name": "Jio Platforms",
    "type": "Mainboard",
    "price": 1119.0,
-   "gmp": 244.5,
+   "gmp": 244.0,
    "gmp_low": 148.0,
    "gmp_high": 273.0,
    "lot": 12,
@@ -173,8 +186,8 @@
    "listing": "2026-10-28",
    "gmp_sources": {
     "InvestorGain": 244.0,
-    "IPOGyani": 245.0,
-    "IPOJi": 245.0,
+    "IPOGyani": 244.0,
+    "IPOJi": 244.0,
     "IPOGuru": 244.0
    }
   },
