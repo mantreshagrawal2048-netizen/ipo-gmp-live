@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T11:59:35.625233+05:30",
+ "generated_at": "2026-10-27T13:37:18.756280+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -7,8 +7,8 @@
    "type": "SME",
    "price": 200.0,
    "gmp": null,
-   "gmp_low": null,
-   "gmp_high": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
    "lot": 600,
    "open": "2026-10-30",
    "close": "2026-11-03",
@@ -45,14 +45,17 @@
    "name": "Maxwell Engineering Solutions",
    "type": "SME",
    "price": 158.0,
-   "gmp": null,
-   "gmp_low": null,
-   "gmp_high": null,
+   "gmp": 7.0,
+   "gmp_low": 14.0,
+   "gmp_high": 14.0,
    "lot": 800,
    "open": "2026-10-30",
    "close": "2026-11-03",
    "listing": "2026-11-06",
-   "gmp_sources": {}
+   "gmp_sources": {
+    "InvestorGain": 14.0,
+    "IPOGuru": 0.0
+   }
   },
   {
    "name": "Antala Industries",
@@ -89,7 +92,7 @@
    "name": "M.K.Sons Fine Jewels",
    "type": "Mainboard",
    "price": 162.0,
-   "gmp": 7.5,
+   "gmp": 7.0,
    "gmp_low": 7.0,
    "gmp_high": 8.0,
    "lot": 91,
@@ -98,8 +101,8 @@
    "listing": "2026-11-04",
    "gmp_sources": {
     "InvestorGain": 7.0,
-    "IPOGyani": 8.0,
-    "IPOJi": 8.0,
+    "IPOGyani": 7.0,
+    "IPOJi": 7.0,
     "IPOGuru": 7.0
    }
   },
@@ -107,16 +110,16 @@
    "name": "Ajwa Projects",
    "type": "SME",
    "price": 203.0,
-   "gmp": 10.0,
+   "gmp": 25.0,
    "gmp_low": 10.0,
-   "gmp_high": 10.0,
+   "gmp_high": 25.0,
    "lot": 600,
    "open": "2026-10-28",
    "close": "2026-10-30",
    "listing": "2026-11-04",
    "gmp_sources": {
-    "InvestorGain": 10.0,
-    "IPOGuru": 10.0
+    "InvestorGain": 25.0,
+    "IPOGuru": 25.0
    }
   },
   {
@@ -151,51 +154,51 @@
    "price": 150.0,
    "gmp": 38.0,
    "gmp_low": 18.0,
-   "gmp_high": 40.0,
+   "gmp_high": 41.0,
    "lot": 100,
    "open": "2026-10-27",
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 40.0,
-    "IPOGyani": 40.0,
-    "IPOJi": 32.0,
-    "IPOGuru": 40.0
+    "InvestorGain": 41.0,
+    "IPOGyani": 39.0,
+    "IPOJi": 33.0,
+    "IPOGuru": 39.0
    }
   },
   {
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 20.25,
-   "gmp_low": 20.0,
+   "gmp": 17.75,
+   "gmp_low": 18.0,
    "gmp_high": 32.0,
    "lot": 45,
    "open": "2026-10-27",
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 20.0,
-    "IPOGyani": 20.0,
-    "IPOJi": 21.0,
-    "IPOGuru": 20.0
+    "InvestorGain": 18.0,
+    "IPOGyani": 15.0,
+    "IPOJi": 20.0,
+    "IPOGuru": 18.0
    }
   },
   {
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 12.75,
-   "gmp_low": 12.0,
+   "gmp": 11.0,
+   "gmp_low": 10.0,
    "gmp_high": 121.0,
    "lot": 9,
    "open": "2026-10-26",
    "close": "2026-10-28",
    "listing": "2026-11-02",
    "gmp_sources": {
-    "InvestorGain": 12.0,
-    "IPOGyani": 15.0,
-    "IPOJi": 12.0,
+    "InvestorGain": 10.0,
+    "IPOGyani": 12.0,
+    "IPOJi": 10.0,
     "IPOGuru": 12.0
    }
   },
@@ -216,7 +219,7 @@
    "name": "Paras Healthcare",
    "type": "Mainboard",
    "price": 693.0,
-   "gmp": 11.25,
+   "gmp": 11.75,
    "gmp_low": 9.0,
    "gmp_high": 96.0,
    "lot": 21,
@@ -225,8 +228,8 @@
    "listing": "2026-10-28",
    "gmp_sources": {
     "InvestorGain": 12.0,
-    "IPOGyani": 11.0,
-    "IPOJi": 10.0,
+    "IPOGyani": 12.0,
+    "IPOJi": 11.0,
     "IPOGuru": 12.0
    }
   },
@@ -234,7 +237,7 @@
    "name": "Jio Platforms",
    "type": "Mainboard",
    "price": 1119.0,
-   "gmp": 256.5,
+   "gmp": 261.25,
    "gmp_low": 148.0,
    "gmp_high": 273.0,
    "lot": 12,
@@ -242,10 +245,10 @@
    "close": "2026-10-23",
    "listing": "2026-10-28",
    "gmp_sources": {
-    "InvestorGain": 260.0,
-    "IPOGyani": 251.0,
-    "IPOJi": 255.0,
-    "IPOGuru": 260.0
+    "InvestorGain": 263.0,
+    "IPOGyani": 261.0,
+    "IPOJi": 260.0,
+    "IPOGuru": 261.0
    }
   }
  ],
