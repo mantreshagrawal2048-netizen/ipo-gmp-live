@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T18:08:15.856933+05:30",
+ "generated_at": "2026-10-27T19:53:17.553754+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -33,8 +33,8 @@
    "type": "SME",
    "price": 105.0,
    "gmp": null,
-   "gmp_low": null,
-   "gmp_high": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
    "lot": 1200,
    "open": "2026-10-30",
    "close": "2026-11-03",
@@ -92,18 +92,18 @@
    "name": "M.K.Sons Fine Jewels",
    "type": "Mainboard",
    "price": 162.0,
-   "gmp": 7.25,
+   "gmp": 8.5,
    "gmp_low": 7.0,
-   "gmp_high": 8.0,
+   "gmp_high": 9.0,
    "lot": 91,
    "open": "2026-10-28",
    "close": "2026-10-30",
    "listing": "2026-11-04",
    "gmp_sources": {
-    "InvestorGain": 7.5,
-    "IPOGyani": 7.0,
+    "InvestorGain": 9.0,
+    "IPOGyani": 9.0,
     "IPOJi": 7.0,
-    "IPOGuru": 7.5
+    "IPOGuru": 9.0
    }
   },
   {
@@ -152,7 +152,7 @@
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 40.25,
+   "gmp": 40.33,
    "gmp_low": 18.0,
    "gmp_high": 44.0,
    "lot": 100,
@@ -161,7 +161,7 @@
    "listing": "2026-11-03",
    "gmp_sources": {
     "InvestorGain": 44.0,
-    "IPOGyani": 39.0,
+    "IPOGyani": 39.33,
     "IPOJi": 34.0,
     "IPOGuru": 44.0
    }
@@ -170,7 +170,7 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 15.75,
+   "gmp": 15.0,
    "gmp_low": 15.0,
    "gmp_high": 32.0,
    "lot": 45,
@@ -179,7 +179,7 @@
    "listing": "2026-11-03",
    "gmp_sources": {
     "InvestorGain": 15.0,
-    "IPOGyani": 18.0,
+    "IPOGyani": 15.0,
     "IPOJi": 15.0,
     "IPOGuru": 15.0
    }
@@ -219,7 +219,7 @@
    "name": "Paras Healthcare",
    "type": "Mainboard",
    "price": 693.0,
-   "gmp": 15.75,
+   "gmp": 15.5,
    "gmp_low": 9.0,
    "gmp_high": 96.0,
    "lot": 21,
@@ -228,7 +228,7 @@
    "listing": "2026-10-28",
    "gmp_sources": {
     "InvestorGain": 16.0,
-    "IPOGyani": 17.0,
+    "IPOGyani": 16.0,
     "IPOJi": 14.0,
     "IPOGuru": 16.0
    }
@@ -237,7 +237,7 @@
    "name": "Jio Platforms",
    "type": "Mainboard",
    "price": 1119.0,
-   "gmp": 250.75,
+   "gmp": 243.25,
    "gmp_low": 148.0,
    "gmp_high": 273.0,
    "lot": 12,
@@ -245,10 +245,10 @@
    "close": "2026-10-23",
    "listing": "2026-10-28",
    "gmp_sources": {
-    "InvestorGain": 251.0,
-    "IPOGyani": 251.0,
-    "IPOJi": 250.0,
-    "IPOGuru": 251.0
+    "InvestorGain": 244.0,
+    "IPOGyani": 244.0,
+    "IPOJi": 244.0,
+    "IPOGuru": 241.0
    }
   }
  ],
