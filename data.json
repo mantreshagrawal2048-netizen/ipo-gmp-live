@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T06:57:47.810697+05:30",
+ "generated_at": "2026-10-28T07:43:42.102793+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -237,7 +237,7 @@
    "name": "Jio Platforms",
    "type": "Mainboard",
    "price": 1119.0,
-   "gmp": 246.75,
+   "gmp": 246.5,
    "gmp_low": 148.0,
    "gmp_high": 273.0,
    "lot": 12,
@@ -246,7 +246,7 @@
    "listing": "2026-10-28",
    "gmp_sources": {
     "InvestorGain": 247.0,
-    "IPOGyani": 248.0,
+    "IPOGyani": 247.0,
     "IPOJi": 245.0,
     "IPOGuru": 247.0
    }
