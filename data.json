@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T17:35:18.457354+05:30",
+ "generated_at": "2026-10-28T18:56:22.255990+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -108,15 +108,15 @@
    "name": "M.K.Sons Fine Jewels",
    "type": "Mainboard",
    "price": 162.0,
-   "gmp": 11.0,
+   "gmp": 11.25,
    "gmp_low": 7.0,
-   "gmp_high": 12.0,
+   "gmp_high": 13.0,
    "lot": 91,
    "open": "2026-10-28",
    "close": "2026-10-30",
    "listing": "2026-11-04",
    "gmp_sources": {
-    "InvestorGain": 12.0,
+    "InvestorGain": 13.0,
     "IPOGyani": 12.0,
     "IPOJi": 8.0,
     "IPOGuru": 12.0
@@ -126,7 +126,7 @@
    "name": "Ajwa Projects",
    "type": "SME",
    "price": 203.0,
-   "gmp": 38.0,
+   "gmp": 35.0,
    "gmp_low": 10.0,
    "gmp_high": 38.0,
    "lot": 600,
@@ -134,8 +134,8 @@
    "close": "2026-10-30",
    "listing": "2026-11-04",
    "gmp_sources": {
-    "InvestorGain": 38.0,
-    "IPOGuru": 38.0
+    "InvestorGain": 35.0,
+    "IPOGuru": 35.0
    }
   },
   {
@@ -168,43 +168,43 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 15.25,
-   "gmp_low": 15.0,
+   "gmp": 14.25,
+   "gmp_low": 13.0,
    "gmp_high": 32.0,
    "lot": 45,
    "open": "2026-10-27",
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 15.0,
+    "InvestorGain": 13.0,
     "IPOGyani": 15.0,
     "IPOJi": 16.0,
-    "IPOGuru": 15.0
+    "IPOGuru": 13.0
    }
   },
   {
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 43.75,
+   "gmp": 45.25,
    "gmp_low": 18.0,
-   "gmp_high": 47.0,
+   "gmp_high": 50.0,
    "lot": 100,
    "open": "2026-10-27",
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 47.0,
+    "InvestorGain": 50.0,
     "IPOGyani": 43.0,
     "IPOJi": 38.0,
-    "IPOGuru": 47.0
+    "IPOGuru": 50.0
    }
   },
   {
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 20.25,
+   "gmp": 24.75,
    "gmp_low": 11.0,
    "gmp_high": 121.0,
    "lot": 9,
@@ -212,10 +212,10 @@
    "close": "2026-10-28",
    "listing": "2026-11-02",
    "gmp_sources": {
-    "InvestorGain": 22.0,
-    "IPOGyani": 19.0,
-    "IPOJi": 18.0,
-    "IPOGuru": 22.0
+    "InvestorGain": 25.0,
+    "IPOGyani": 25.0,
+    "IPOJi": 24.0,
+    "IPOGuru": 25.0
    }
   },
   {
