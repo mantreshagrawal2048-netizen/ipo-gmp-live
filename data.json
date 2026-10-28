@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T23:35:45.570740+05:30",
+ "generated_at": "2026-10-29T00:47:49.987919+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -168,7 +168,7 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 12.25,
+   "gmp": 11.5,
    "gmp_low": 10.0,
    "gmp_high": 32.0,
    "lot": 45,
@@ -177,7 +177,7 @@
    "listing": "2026-11-03",
    "gmp_sources": {
     "InvestorGain": 10.0,
-    "IPOGyani": 13.0,
+    "IPOGyani": 10.0,
     "IPOJi": 16.0,
     "IPOGuru": 10.0
    }
@@ -204,7 +204,7 @@
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 26.75,
+   "gmp": 27.25,
    "gmp_low": 11.0,
    "gmp_high": 121.0,
    "lot": 9,
@@ -213,7 +213,7 @@
    "listing": "2026-11-02",
    "gmp_sources": {
     "InvestorGain": 28.0,
-    "IPOGyani": 26.0,
+    "IPOGyani": 28.0,
     "IPOJi": 25.0,
     "IPOGuru": 28.0
    }
@@ -230,39 +230,25 @@
    "close": "2026-10-27",
    "listing": "2026-10-30",
    "gmp_sources": {}
-  },
+  }
+ ],
+ "listed": [
   {
    "name": "Paras Healthcare",
    "type": "Mainboard",
    "price": 693.0,
    "gmp": 13.0,
-   "gmp_low": 9.0,
-   "gmp_high": 96.0,
-   "lot": 21,
-   "open": "2026-10-21",
-   "close": "2026-10-23",
-   "listing": "2026-10-28",
-   "gmp_sources": {
-    "InvestorGain": 13.0
-   }
+   "listing_gain_pct": 3.9,
+   "listing": "2026-10-28"
   },
   {
    "name": "Jio Platforms",
    "type": "Mainboard",
    "price": 1119.0,
    "gmp": 250.0,
-   "gmp_low": 148.0,
-   "gmp_high": 273.0,
-   "lot": 12,
-   "open": "2026-10-21",
-   "close": "2026-10-23",
-   "listing": "2026-10-28",
-   "gmp_sources": {
-    "InvestorGain": 250.0
-   }
-  }
- ],
- "listed": [
+   "listing_gain_pct": 21.36,
+   "listing": "2026-10-28"
+  },
   {
    "name": "Tonbo Imaging India",
    "type": "Mainboard",
