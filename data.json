@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T13:48:28.042052+05:30",
+ "generated_at": "2026-10-28T16:37:41.949529+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -32,14 +32,17 @@
    "name": "Johnsoncab Electricals",
    "type": "SME",
    "price": 200.0,
-   "gmp": null,
-   "gmp_low": 0.0,
-   "gmp_high": 0.0,
+   "gmp": 9.0,
+   "gmp_low": 9.0,
+   "gmp_high": 9.0,
    "lot": 600,
    "open": "2026-10-30",
    "close": "2026-11-03",
    "listing": "2026-11-06",
-   "gmp_sources": {}
+   "gmp_sources": {
+    "InvestorGain": 9.0,
+    "IPOGuru": 9.0
+   }
   },
   {
    "name": "Vectras Enprocon",
@@ -105,18 +108,18 @@
    "name": "M.K.Sons Fine Jewels",
    "type": "Mainboard",
    "price": 162.0,
-   "gmp": 10.38,
+   "gmp": 11.0,
    "gmp_low": 7.0,
-   "gmp_high": 11.5,
+   "gmp_high": 12.0,
    "lot": 91,
    "open": "2026-10-28",
    "close": "2026-10-30",
    "listing": "2026-11-04",
    "gmp_sources": {
-    "InvestorGain": 11.5,
-    "IPOGyani": 10.5,
+    "InvestorGain": 12.0,
+    "IPOGyani": 12.0,
     "IPOJi": 8.0,
-    "IPOGuru": 11.5
+    "IPOGuru": 12.0
    }
   },
   {
@@ -165,54 +168,54 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 16.75,
-   "gmp_low": 17.0,
+   "gmp": 15.25,
+   "gmp_low": 15.0,
    "gmp_high": 32.0,
    "lot": 45,
    "open": "2026-10-27",
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 17.0,
-    "IPOGyani": 16.0,
-    "IPOJi": 17.0,
-    "IPOGuru": 17.0
+    "InvestorGain": 15.0,
+    "IPOGyani": 15.0,
+    "IPOJi": 16.0,
+    "IPOGuru": 15.0
    }
   },
   {
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 42.5,
+   "gmp": 43.75,
    "gmp_low": 18.0,
-   "gmp_high": 46.0,
+   "gmp_high": 47.0,
    "lot": 100,
    "open": "2026-10-27",
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 46.0,
-    "IPOGyani": 42.0,
-    "IPOJi": 36.0,
-    "IPOGuru": 46.0
+    "InvestorGain": 47.0,
+    "IPOGyani": 43.0,
+    "IPOJi": 38.0,
+    "IPOGuru": 47.0
    }
   },
   {
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 9.75,
-   "gmp_low": 9.0,
+   "gmp": 17.0,
+   "gmp_low": 11.0,
    "gmp_high": 121.0,
    "lot": 9,
    "open": "2026-10-26",
    "close": "2026-10-28",
    "listing": "2026-11-02",
    "gmp_sources": {
-    "InvestorGain": 9.0,
-    "IPOGyani": 9.0,
-    "IPOJi": 12.0,
-    "IPOGuru": 9.0
+    "InvestorGain": 19.0,
+    "IPOGyani": 12.0,
+    "IPOJi": 18.0,
+    "IPOGuru": 19.0
    }
   },
   {
@@ -240,8 +243,7 @@
    "close": "2026-10-23",
    "listing": "2026-10-28",
    "gmp_sources": {
-    "InvestorGain": 13.0,
-    "IPOGyani": 13.0
+    "InvestorGain": 13.0
    }
   },
   {
@@ -256,8 +258,7 @@
    "close": "2026-10-23",
    "listing": "2026-10-28",
    "gmp_sources": {
-    "InvestorGain": 250.0,
-    "IPOGyani": 250.0
+    "InvestorGain": 250.0
    }
   }
  ],
