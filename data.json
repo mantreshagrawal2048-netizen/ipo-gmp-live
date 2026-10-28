@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T07:43:42.102793+05:30",
+ "generated_at": "2026-10-28T08:36:32.793221+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -152,7 +152,7 @@
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 40.33,
+   "gmp": 41.5,
    "gmp_low": 18.0,
    "gmp_high": 44.0,
    "lot": 100,
@@ -161,7 +161,7 @@
    "listing": "2026-11-03",
    "gmp_sources": {
     "InvestorGain": 44.0,
-    "IPOGyani": 39.33,
+    "IPOGyani": 44.0,
     "IPOJi": 34.0,
     "IPOGuru": 44.0
    }
@@ -237,7 +237,7 @@
    "name": "Jio Platforms",
    "type": "Mainboard",
    "price": 1119.0,
-   "gmp": 246.5,
+   "gmp": 247.25,
    "gmp_low": 148.0,
    "gmp_high": 273.0,
    "lot": 12,
@@ -247,7 +247,7 @@
    "gmp_sources": {
     "InvestorGain": 247.0,
     "IPOGyani": 247.0,
-    "IPOJi": 245.0,
+    "IPOJi": 248.0,
     "IPOGuru": 247.0
    }
   }
