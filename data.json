@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T11:33:45.943808+05:30",
+ "generated_at": "2026-10-28T13:48:28.042052+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -105,18 +105,18 @@
    "name": "M.K.Sons Fine Jewels",
    "type": "Mainboard",
    "price": 162.0,
-   "gmp": 8.75,
+   "gmp": 10.38,
    "gmp_low": 7.0,
-   "gmp_high": 10.0,
+   "gmp_high": 11.5,
    "lot": 91,
    "open": "2026-10-28",
    "close": "2026-10-30",
    "listing": "2026-11-04",
    "gmp_sources": {
-    "InvestorGain": 8.5,
-    "IPOGyani": 10.0,
+    "InvestorGain": 11.5,
+    "IPOGyani": 10.5,
     "IPOJi": 8.0,
-    "IPOGuru": 8.5
+    "IPOGuru": 11.5
    }
   },
   {
@@ -165,7 +165,7 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 17.0,
+   "gmp": 16.75,
    "gmp_low": 17.0,
    "gmp_high": 32.0,
    "lot": 45,
@@ -174,7 +174,7 @@
    "listing": "2026-11-03",
    "gmp_sources": {
     "InvestorGain": 17.0,
-    "IPOGyani": 17.0,
+    "IPOGyani": 16.0,
     "IPOJi": 17.0,
     "IPOGuru": 17.0
    }
@@ -183,36 +183,36 @@
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 42.0,
+   "gmp": 42.5,
    "gmp_low": 18.0,
-   "gmp_high": 44.0,
+   "gmp_high": 46.0,
    "lot": 100,
    "open": "2026-10-27",
    "close": "2026-10-29",
    "listing": "2026-11-03",
    "gmp_sources": {
-    "InvestorGain": 44.0,
-    "IPOGyani": 44.0,
+    "InvestorGain": 46.0,
+    "IPOGyani": 42.0,
     "IPOJi": 36.0,
-    "IPOGuru": 44.0
+    "IPOGuru": 46.0
    }
   },
   {
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 10.5,
-   "gmp_low": 10.0,
+   "gmp": 9.75,
+   "gmp_low": 9.0,
    "gmp_high": 121.0,
    "lot": 9,
    "open": "2026-10-26",
    "close": "2026-10-28",
    "listing": "2026-11-02",
    "gmp_sources": {
-    "InvestorGain": 10.0,
-    "IPOGyani": 11.0,
-    "IPOJi": 11.0,
-    "IPOGuru": 10.0
+    "InvestorGain": 9.0,
+    "IPOGyani": 9.0,
+    "IPOJi": 12.0,
+    "IPOGuru": 9.0
    }
   },
   {
