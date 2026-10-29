@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T05:28:36.924999+05:30",
+ "generated_at": "2026-10-29T07:48:32.472400+05:30",
  "source": "InvestorGain, IPOGyani, IPOWatch, IPO Ji, IPO Guru",
  "ipos": [
   {
@@ -7,8 +7,8 @@
    "type": "SME",
    "price": 94.0,
    "gmp": null,
-   "gmp_low": null,
-   "gmp_high": null,
+   "gmp_low": 0.0,
+   "gmp_high": 0.0,
    "lot": 1200,
    "open": "2026-11-02",
    "close": "2026-11-04",
@@ -117,8 +117,8 @@
    "listing": "2026-11-04",
    "gmp_sources": {
     "InvestorGain": 15.0,
-    "IPOGyani": 16.0,
-    "IPOJi": 10.0,
+    "IPOGyani": 15.0,
+    "IPOJi": 11.0,
     "IPOGuru": 15.0
    }
   },
@@ -168,7 +168,7 @@
    "name": "SFC Environmental Technologies",
    "type": "Mainboard",
    "price": 330.0,
-   "gmp": 11.5,
+   "gmp": 10.5,
    "gmp_low": 10.0,
    "gmp_high": 32.0,
    "lot": 45,
@@ -178,7 +178,7 @@
    "gmp_sources": {
     "InvestorGain": 10.0,
     "IPOGyani": 10.0,
-    "IPOJi": 16.0,
+    "IPOJi": 12.0,
     "IPOGuru": 10.0
    }
   },
@@ -186,7 +186,7 @@
    "name": "BLS Polymers",
    "type": "Mainboard",
    "price": 150.0,
-   "gmp": 46.75,
+   "gmp": 47.42,
    "gmp_low": 18.0,
    "gmp_high": 51.0,
    "lot": 100,
@@ -195,8 +195,8 @@
    "listing": "2026-11-03",
    "gmp_sources": {
     "InvestorGain": 51.0,
-    "IPOGyani": 45.0,
-    "IPOJi": 40.0,
+    "IPOGyani": 45.67,
+    "IPOJi": 42.0,
     "IPOGuru": 51.0
    }
   },
@@ -204,7 +204,7 @@
    "name": "EAAA India Alternatives",
    "type": "Mainboard",
    "price": 1665.0,
-   "gmp": 27.25,
+   "gmp": 27.5,
    "gmp_low": 11.0,
    "gmp_high": 121.0,
    "lot": 9,
@@ -214,7 +214,7 @@
    "gmp_sources": {
     "InvestorGain": 28.0,
     "IPOGyani": 28.0,
-    "IPOJi": 25.0,
+    "IPOJi": 26.0,
     "IPOGuru": 28.0
    }
   },
