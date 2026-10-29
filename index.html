@@ -62,6 +62,13 @@ svg text{fill:var(--muted);font-size:10px}
 .srcs span{display:block;color:var(--muted);font-size:.78rem}
 .h-open{color:var(--good)}.h-closed{color:var(--gold)}.h-up{color:var(--navy)}.h-list{color:var(--navy)}
 h1 .acc{color:var(--good)}
+.tog{border:1px solid var(--line);background:var(--card);color:var(--muted);padding:4px 10px;border-radius:99px;cursor:pointer;font-size:.78rem;margin-right:10px}
+.tog.on{border-color:var(--accent);color:var(--accent);font-weight:700}
+.detail{color:var(--muted);font-size:.74rem;line-height:1.35;white-space:normal;max-width:260px;margin-left:auto}
+.bth{font-size:.95rem;margin:18px 0 6px;color:var(--navy)}
+select{background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:.9rem;margin-bottom:8px}
+.best td{background:rgba(15,157,88,.08)}
+.dq table{min-width:0}
 </style>
 </head>
 <body>
@@ -86,7 +93,8 @@ h1 .acc{color:var(--good)}
         <li><b class="g">Averaging.</b> The GMP shown for each IPO is the <b>average of the sources that quote a number</b> for it (see the Sources tab for the full list and formula).</li>
         <li><b class="g">Expected return.</b> Expected listing price = issue price (upper band) + GMP. Expected return % = GMP ÷ issue price × 100. Profit per lot = GMP × lot size.</li>
         <li><b class="g">Live page.</b> This page re-reads the data file every 5 minutes and sorts each IPO into <span class="g">open</span>, <span class="au">closed-awaiting-listing</span> or <span class="n">upcoming</span> by its dates.</li>
-        <li><b class="g">Accuracy check.</b> After an IPO lists, its final GMP is saved next to the actual listing gain, so the “GMP vs actual” section below shows how reliable GMP has really been.</li>
+        <li><b class="g">Accuracy check.</b> After an IPO lists, its final GMP is saved next to the actual listing gain, and the section below tests the average, the median and each single source against it, so you can see how reliable GMP has really been and whether averaging helps.</li>
+        <li><b class="g">Scope.</b> The expected return is the <b>per-share listing gain</b> implied by GMP. It is not the return on an investor’s capital: brokerage, taxes and allotment odds are not included. Subscription levels, valuation and market conditions also affect listing outcomes and are <span class="r">not modelled</span> here.</li>
       </ol>
       <p class="note"><span class="r">Important:</span> GMP is an unofficial, unregulated grey-market estimate. It is not an official figure and can be wrong or manipulated. This project is for learning and information only, not investment advice.</p>
     </div>
@@ -106,12 +114,14 @@ h1 .acc{color:var(--good)}
       <h3>Formula</h3>
       <div class="formula">
         <span class="g">Average GMP (₹)</span> = (GMP₁ + GMP₂ + … + GMPₙ) ÷ n<br>
-        <span class="n">n</span> = number of sources quoting a GMP for that IPO (maximum 5)<br>
+        <span class="n">n</span> = number of sources counted for that IPO (maximum 5)<br>
         <span class="g">Expected return (%)</span> = Average GMP ÷ Issue price (upper band) × 100<br>
         <span class="g">Expected listing price (₹)</span> = Issue price + Average GMP
       </div>
       <p class="note"><b>Illustrative example:</b> issue price ₹500; five sources quote ₹40, ₹44, ₹46, ₹50 and ₹45. Average GMP = 225 ÷ 5 = <span class="g">₹45</span>, so expected return = 45 ÷ 500 × 100 = <span class="g">9.0%</span> and expected listing price = <span class="g">₹545</span>.</p>
-      <p class="note">Only sources that quote a premium for an IPO are counted. A ₹0 shown by IPOWatch or IPO Guru is treated as “no quote” unless another source quotes a premium. IPOs with no quote anywhere show <span class="r">“No GMP quoted yet”</span>.</p>
+      <p class="note">Only sources that quote a premium for an IPO are counted. A ₹0 shown by IPOWatch or IPO Guru is treated as “no quote” unless another source quotes a premium. If a source’s quotes are found to be <b>identical to another source’s</b> (it is probably copying it), it is left out of the average automatically so the same number is not counted twice. The issue price is also cross-checked across sources. IPOs with no quote anywhere show <span class="r">“No GMP quoted yet”</span>. Use “Show source breakdown” at the top of the page to see each source’s quote, the median and any price differences for every IPO.</p>
+      <h3>Data quality (latest run)</h3>
+      <div id="dq" class="dq scroll"></div>
     </div>
   </details>
 
@@ -119,13 +129,19 @@ h1 .acc{color:var(--good)}
     <div class="tabs" id="tabs">
       <button data-t="All" class="on">All</button><button data-t="Mainboard">Mainboard</button><button data-t="SME">SME</button>
     </div>
-    <div class="live"><span class="dot"></span><span id="stamp">Loading…</span></div>
+    <div class="live"><button class="tog" id="tog" type="button">Show source breakdown</button><span class="dot"></span><span id="stamp">Loading…</span></div>
   </div>
   <div class="stale" id="stale"></div>
 
   <div class="card"><h2 class="h-open">Open for subscription</h2><div id="open" class="scroll"></div></div>
   <div class="card"><h2 class="h-closed">Closed, awaiting listing</h2><div id="closed" class="scroll"></div></div>
   <div class="card"><h2 class="h-up">Upcoming</h2><div id="upcoming" class="scroll"></div></div>
+
+  <div class="card">
+    <h2 class="h-up">GMP trend by IPO</h2>
+    <select id="tsel" aria-label="Choose an IPO"></select>
+    <div id="tchart"></div>
+  </div>
 
   <div class="card">
     <h2 class="h-list">Listed IPOs: GMP vs actual listing gain</h2>
@@ -135,9 +151,11 @@ h1 .acc{color:var(--good)}
       <div class="scroll" id="ltable"></div>
       <div id="chart"></div>
     </div>
+    <h3 class="bth">Which estimate predicted listing gains best?</h3>
+    <div id="btbox" class="scroll"></div>
   </div>
 
-  <p class="note">Sources: InvestorGain, IPOGyani, IPOWatch, IPO Ji and IPO Guru (see the Sources tab). In the accuracy section, “final GMP” is the last GMP recorded before listing and “actual gain” is the listing gain reported by InvestorGain; IPOs showing exactly 0% are left out because that value can also mean the figure was not captured. Built by <span id="author2"></span>.</p>
+  <p class="note">Sources: InvestorGain, IPOGyani, IPOWatch, IPO Ji and IPO Guru (see the Sources tab). In the accuracy section, “final GMP” is the last GMP recorded before listing and “actual gain” is the listing gain reported by InvestorGain; IPOs showing exactly 0% are left out because that value can also mean the figure was not captured. Data are read from publicly accessible pages for non-commercial, educational use; all rights remain with the respective websites. Built by <span id="author2"></span>.</p>
 </div>
 <script>
 var AUTHOR="Mantresh Agrawal";   // change your name here
@@ -157,6 +175,95 @@ function group(x,t){
   if(x.close&&t<=x.close)return "open";
   return "closed";
 }
+
+var SHOW=false;
+function detail(x){
+  if(!SHOW)return "";
+  var s=x.gmp_sources||{},k=Object.keys(s); if(!k.length)return "";
+  var cnt=x.gmp_counted||k;
+  var vals=cnt.map(function(n){return s[n];}).sort(function(a,b){return a-b;});
+  var m=vals.length%2?vals[(vals.length-1)/2]:(vals[vals.length/2-1]+vals[vals.length/2])/2;
+  var parts=k.map(function(n){var c=cnt.indexOf(n)>-1;return "<span"+(c?"":" style='opacity:.55;text-decoration:line-through' title='Not counted: duplicates another source'")+">"+esc(n)+" "+inr(s[n])+"</span>";});
+  var out="<div class='detail'>"+parts.join(" · ")+"</div><div class='detail'>Median "+inr(m)+" · "+cnt.length+" of "+k.length+" sources counted</div>";
+  var pm=x.price_mismatch||{},pk=Object.keys(pm);
+  if(pk.length)out+="<div class='detail' style='color:var(--bad)'>Issue price differs on "+pk.map(function(n){return esc(n)+" ("+inr(pm[n])+")";}).join(", ")+"</div>";
+  return out;
+}
+function drawTrend(h){
+  var P=h.points,W=560,H=230,pad=42;
+  var xs=P.map(function(p){return new Date(p.t).getTime();}),x0=xs[0],x1=xs[xs.length-1];
+  var med=function(p){return p.med!=null?p.med:p.avg;};
+  var ys=[];P.forEach(function(p){ys.push(p.avg,med(p));});
+  var lo=Math.min.apply(null,ys),hi=Math.max.apply(null,ys);if(hi===lo){hi=lo+1;lo=lo-1;}
+  function sx(t){return pad+(t-x0)/((x1-x0)||1)*(W-2*pad);}
+  function sy(v){return H-pad-(v-lo)/(hi-lo)*(H-2*pad);}
+  function path(f){return P.map(function(p,i){return (i?"L":"M")+sx(new Date(p.t).getTime()).toFixed(1)+" "+sy(f(p)).toFixed(1);}).join(" ");}
+  var last=P[P.length-1],pc=(last.avg/h.price*100);
+  var dfmt=function(t){return new Date(t).toLocaleDateString("en-IN",{day:"numeric",month:"short",timeZone:"Asia/Kolkata"});};
+  var s="<svg viewBox='0 0 "+W+" "+H+"' width='100%' role='img' aria-label='GMP over time'>";
+  s+="<rect x='"+pad+"' y='"+pad/2+"' width='"+(W-2*pad)+"' height='"+(H-pad-pad/2)+"' fill='none' stroke='var(--line)'/>";
+  s+="<path d='"+path(med)+"' fill='none' stroke='var(--gold)' stroke-width='1.5' stroke-dasharray='4 3'/>";
+  s+="<path d='"+path(function(p){return p.avg;})+"' fill='none' stroke='var(--good)' stroke-width='2.2'/>";
+  s+="<text x='4' y='"+(sy(hi)+4)+"'>"+inr(hi)+"</text><text x='4' y='"+(sy(lo)+4)+"'>"+inr(lo)+"</text>";
+  s+="<text x='"+pad+"' y='"+(H-pad+14)+"'>"+dfmt(x0)+"</text><text x='"+(W-pad)+"' y='"+(H-pad+14)+"' text-anchor='end'>"+dfmt(x1)+"</text>";
+  s+="</svg><div class='note'><span class='g'>Solid green: average GMP</span> · <span class='au'>dashed gold: median</span> · latest average "+inr(last.avg)+" ("+pct(pc)+" of the ₹"+h.price+" issue price). "+P.length+" snapshots.</div>";
+  return s;
+}
+function renderTrend(){
+  var H=DATA.history||{},keys=Object.keys(H).filter(function(k){return H[k].points&&H[k].points.length>=2&&(TYPE==="All"||H[k].type===TYPE);});
+  var sel=document.getElementById("tsel"),box=document.getElementById("tchart");
+  if(!keys.length){sel.style.display="none";box.innerHTML="<div class='empty'>GMP history is being collected. A chart appears here once an IPO has been tracked for a few updates.</div>";return;}
+  sel.style.display="";
+  var cur=sel.value;
+  sel.innerHTML=keys.map(function(k){return "<option value='"+esc(k)+"'>"+esc(H[k].name)+"</option>";}).join("");
+  if(keys.indexOf(cur)>-1)sel.value=cur;
+  box.innerHTML=drawTrend(H[sel.value||keys[0]]);
+}
+function renderBT(L){
+  var box=document.getElementById("btbox");
+  var T=L.filter(function(r){return r.x.bt&&r.x.bt.final;});
+  if(T.length<3){box.innerHTML="<div class='empty'>Collecting multi-source snapshots: "+T.length+" listed IPO"+(T.length===1?"":"s")+" with full history so far. This comparison appears once at least 3 IPOs have listed since tracking began.</div>";return;}
+  var est={};
+  function add(name,v,r){if(v==null)return;(est[name]=est[name]||[]).push(v/r.x.price*100-r.a);}
+  T.forEach(function(r){
+    var f=r.x.bt.final,c=r.x.bt.close;
+    add("Average of counted sources (pre-listing)",f.avg,r);
+    add("Median of sources (pre-listing)",f.med,r);
+    if(c)add("Average at bidding close",c.avg,r);
+    Object.keys(f.src||{}).forEach(function(n){add(n+" alone (pre-listing)",f.src[n],r);});
+  });
+  var rows=Object.keys(est).map(function(k){
+    var e=est[k],n=e.length;
+    return {k:k,n:n,mae:e.reduce(function(a,v){return a+Math.abs(v);},0)/n,bias:e.reduce(function(a,v){return a+v;},0)/n,w:e.filter(function(v){return Math.abs(v)<=5;}).length};
+  }).sort(function(a,b){return a.mae-b.mae;});
+  box.innerHTML="<table style='min-width:560px'><thead><tr><th>Estimate</th><th>IPOs</th><th>Avg error (pts)</th><th>Bias (pts)</th><th>Within ±5</th></tr></thead><tbody>"+
+   rows.map(function(r,i){
+     var bc=r.bias>0?"var(--bad)":"var(--good)";
+     return "<tr"+(i===0?" class='best'":"")+"><td><b>"+esc(r.k)+"</b></td><td>"+r.n+"</td><td>"+r.mae.toFixed(2)+"</td><td style='color:"+bc+"'>"+(r.bias>0?"+":"")+r.bias.toFixed(2)+"</td><td>"+r.w+" / "+r.n+"</td></tr>";
+   }).join("")+"</tbody></table><div class='note'>Error = estimated gain % minus actual listing gain %. A lower average error is better; a positive bias means the estimate was too optimistic. Green row = lowest average error. Samples are small, so treat differences as indicative, not conclusive.</div>";
+}
+function renderDQ(){
+  var el=document.getElementById("dq");if(!el||!DATA)return;
+  var s="",h=DATA.health||{},hn=Object.keys(h);
+  if(hn.length){
+    s+="<table><thead><tr><th>Source</th><th>IPOs returned</th><th>Status</th></tr></thead><tbody>"+hn.map(function(n){
+      return "<tr><td>"+esc(n)+"</td><td>"+h[n]+"</td><td><span class='pill "+(h[n]>0?"Strong":"Negative")+"'>"+(h[n]>0?"Responding":"No data")+"</span></td></tr>";
+    }).join("")+"</tbody></table>";
+  }
+  var ov=DATA.overlap||{},ok=Object.keys(ov),rule=DATA.dedupe_rule||{min_pairs:30,match:0.95};
+  if(ok.length){
+    s+="<table style='margin-top:10px'><thead><tr><th>Source pair</th><th>Paired quotes</th><th>Identical</th><th>Verdict</th></tr></thead><tbody>"+ok.map(function(k){
+      var st=ov[k],p=st.n?st.exact/st.n:0,v;
+      if(st.n<rule.min_pairs)v="<span class='au'>Collecting ("+st.n+"/"+rule.min_pairs+")</span>";
+      else if(p>=rule.match)v="<span class='r'>Likely copy: later source excluded</span>";
+      else v="<span class='g'>Distinct</span>";
+      return "<tr><td>"+esc(k.replace("|"," vs "))+"</td><td>"+st.n+"</td><td>"+(p*100).toFixed(0)+"%</td><td>"+v+"</td></tr>";
+    }).join("")+"</tbody></table>";
+  }else s+="<div class='note' style='margin-top:8px'>The source-overlap check starts once enough history has been collected.</div>";
+  var d=DATA.duplicates||{},dk=Object.keys(d);
+  if(dk.length)s+="<div class='note' style='margin-top:8px'><span class='r'>Currently excluded as copies:</span> "+dk.map(function(k){return esc(k)+" (duplicates "+esc(d[k])+")";}).join(", ")+".</div>";
+  el.innerHTML=s;
+}
 function table(rows){
   if(!rows.length)return "<div class='empty'>None right now.</div>";
   rows=rows.map(function(x){return {x:x,p:(x.gmp==null?null:x.gmp/x.price*100)};})
@@ -167,7 +274,7 @@ function table(rows){
     var head="<td><b>"+esc(x.name)+"</b>"+(x.type==="SME"?"<span class='tag'>SME</span>":"")+dt+"</td><td>"+inr(x.price)+"</td>";
     if(r.p==null)return "<tr>"+head+"<td colspan='5' style='text-align:right;color:var(--muted)'>No GMP quoted yet</td></tr>";
     var col=r.p>=0?"var(--good)":"var(--bad)",w=Math.min(Math.abs(r.p),40)/40*100,s=sig(r.p);
-    return "<tr>"+head+"<td><b>"+inr(x.gmp)+"</b></td><td>"+inr(x.price+x.gmp)+"</td>"+
+    return "<tr>"+head+"<td><b>"+inr(x.gmp)+"</b>"+detail(x)+"</td><td>"+inr(x.price+x.gmp)+"</td>"+
      "<td><b style='color:"+col+"'>"+r.p.toFixed(2)+"%</b><div class='bar'><i style='width:"+w+"%;background:"+col+"'></i></div></td>"+
      "<td>"+inr(x.gmp*x.lot)+"</td><td><span class='pill "+s+"'>"+(s==="Flat"?"Flat/Weak":s)+"</span></td></tr>";
   }).join("")+"</tbody></table>";
@@ -197,7 +304,7 @@ function renderListed(){
     var g=x.gmp/x.price*100;return {x:x,g:g,a:x.listing_gain_pct,d:x.listing_gain_pct-g};
   }).sort(function(a,b){return a.x.listing<b.x.listing?1:-1;});
   var st=document.getElementById("lstats"),fd=document.getElementById("finding");
-  if(!L.length){st.innerHTML="";fd.textContent="No listed IPOs to compare yet.";document.getElementById("ltable").innerHTML="";document.getElementById("chart").innerHTML="";return;}
+  if(!L.length){st.innerHTML="";fd.textContent="No listed IPOs to compare yet.";document.getElementById("ltable").innerHTML="";document.getElementById("chart").innerHTML="";document.getElementById("btbox").innerHTML="";return;}
   var n=L.length,avg=function(f){return L.reduce(function(a,r){return a+f(r);},0)/n;};
   var mg=avg(function(r){return r.g;}),ma=avg(function(r){return r.a;}),mae=avg(function(r){return Math.abs(r.d);});
   var close=L.filter(function(r){return Math.abs(r.d)<=5;}).length;
@@ -216,6 +323,7 @@ function renderListed(){
       "<td>"+inr(r.x.gmp)+" <span class='dates'>("+pct(r.g)+")</span></td><td><b>"+pct(r.a)+"</b></td><td><span class='pill "+v+"'>"+lab+"</span></td></tr>";
    }).join("")+"</tbody></table>";
   document.getElementById("chart").innerHTML=scatter(L);
+  renderBT(L);
 }
 
 function render(){
@@ -227,6 +335,8 @@ function render(){
   });
   ["open","closed","upcoming"].forEach(function(k){document.getElementById(k).innerHTML=table(g[k]);});
   renderListed();
+  renderTrend();
+  renderDQ();
   var ts=new Date(DATA.generated_at);
   document.getElementById("stamp").textContent="Data updated "+ts.toLocaleString("en-IN",{timeZone:"Asia/Kolkata",day:"numeric",month:"short",hour:"numeric",minute:"2-digit"})+" IST · checks for new data every 5 min";
   var st=document.getElementById("stale"),age=(Date.now()-ts.getTime())/36e5;
@@ -240,6 +350,8 @@ document.getElementById("tabs").addEventListener("click",function(e){
   var t=e.target.getAttribute("data-t"); if(!t)return; TYPE=t;
   Array.prototype.forEach.call(this.children,function(b){b.classList.toggle("on",b.getAttribute("data-t")===t);}); render();
 });
+document.getElementById("tog").addEventListener("click",function(){SHOW=!SHOW;this.classList.toggle("on",SHOW);this.textContent=SHOW?"Hide source breakdown":"Show source breakdown";render();});
+document.getElementById("tsel").addEventListener("change",function(){renderTrend();});
 load(); setInterval(load,300000);
 </script>
 </body>
